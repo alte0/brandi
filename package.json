@@ -1,7 +1,7 @@
 {
-  "name": "sedona-full-pack",
+  "name": "brandi",
   "version": "1.0.0",
-  "description": "proget",
+  "description": "projet",
   "main": "Gruntfile.js",
   "preferGlobal": "true",
   "scripts": {
