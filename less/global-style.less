@@ -2,4 +2,19 @@ body {
   font-family: @base-font;
   font-size: @base-font-size;
   line-height: @base-line-height;
+  .margin();
+}
+.container {
+  width: 1170px;
+  .margin(0 auto);
+}
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+  &::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
