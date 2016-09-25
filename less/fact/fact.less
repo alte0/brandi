@@ -1,0 +1,55 @@
+.some-fun-fact {
+  background-color: #384d5c;
+  color: white;
+  font-size: 0px;
+  .padding(97px 0 147px 0);
+}
+.some-fun-fact--header h3 {
+  position: relative;
+  font-size: 28px;
+  color: #1ea78d;
+  text-transform: uppercase;
+  text-align: center;
+  .margin(0 0 236px 0);
+  font-weight: 800;
+}
+.some-fun-fact--header h3::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  .margin(0 0 0 -114.5px);
+  bottom: -37px;
+  width: 229px;
+  height: 14px;
+  background: green url("") no-repeat center;
+}
+.some-fun-fact--column {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 270px;
+  font-size: 18px;
+  text-align: center;
+  .margin(0 0 0 30px);
+}
+.some-fun-fact--column__wraper .some-fun-fact--column:first-child, .some-fun-fact--column p {
+  .margin();
+}
+.some-fun-fact--column::before {
+  content: "";
+  position: absolute;
+  top: -173px;
+  width: 126px;
+  height: 126px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  background: green url("") no-repeat center;
+}
+.some-fun-fact--number {
+  font-size: 60px;
+  line-height: 60px;
+}
+.text--some-fun-fact {
+  text-transform: uppercase;
+  line-height: 36px;
+}
