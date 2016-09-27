@@ -10,16 +10,18 @@
   text-align: center;
   .margin(0 0 102px 0);
   font-weight: 800;
-}
-.feature--header h3::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  .margin(0 0 0 -114.5px);
-  bottom: -37px;
-  width: 229px;
-  height: 14px;
-  background: green url("") no-repeat center;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    .margin(0 0 0 -114.5px);
+    bottom: -37px;
+    width: 229px;
+    height: 14px;
+    background: url("@{path-sprite}") 0 -402px;
+	  width: 229px;
+	  height: 14px;
+  }
 }
 .slider--slides {
   font-size: 0;
@@ -40,7 +42,15 @@
   left: -56px;
   width: 40px;
   height: 40px;
-  background: green url("") no-repeat center;
+}
+.column__branding::before {
+  background: url("@{path-sprite}") 0 -282px;
+}
+.column__development::before {
+  background: url("@{path-sprite}") 0 -470px;
+}
+.column__consulting::before {
+  background: url("@{path-sprite}") 0 -430px;
 }
 .column:first-child {
   .margin(0 0 0 70px);

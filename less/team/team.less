@@ -9,16 +9,16 @@
   text-align: center;
   .margin(0 0 70px 0);
   font-weight: 800;
-}
-.team--header h3::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  .margin(0 0 0 -114.5px);
-  bottom: -37px;
-  width: 229px;
-  height: 14px;
-  background: green url("") no-repeat center;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    .margin(0 0 0 -114.5px);
+    bottom: -37px;
+    width: 229px;
+    height: 14px;
+    background: url("@{path-sprite}") 0 -402px;
+  }
 }
 .team .text--semibold {
   text-align: center;
@@ -120,8 +120,33 @@
   width: 42px;
   height: 42px;
   background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
   .margin(0 4px 0 0);
 }
 .social-btn:first-child {
   .margin();
+}
+.social-btn.social-btn--twitter::after,
+.social-btn.social-btn--facebook::after,
+.social-btn.social-btn--google-plus::after {
+  content: "";
+  position: absolute;
+  top:13px;
+	left: 13px;
+}
+.social-btn.social-btn--twitter::after {
+  background: url("@{path-sprite}") 0 -531px;
+	width: 20px;
+	height: 16px;
+}
+.social-btn.social-btn--facebook::after {
+  background: url("@{path-sprite}") 0 -264px;
+	width: 10px;
+	height: 18px;
+  left: 15px;
+}
+.social-btn.social-btn--google-plus::after {
+  background: url("@{path-sprite}") 0 -370px;
+	width: 18px;
+	height: 18px;
 }

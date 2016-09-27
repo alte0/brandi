@@ -18,7 +18,7 @@
       bottom: -37px;
       width: 229px;
       height: 14px;
-      background: green url("") no-repeat center;
+      background: url("@{path-sprite}") 0 -402px;
     }
   }
 }
@@ -74,6 +74,10 @@
   font-size: 13px;
   outline: none;
   border: none;
+}
+.discuss--message input[type='text'],
+.discuss--message input[type='email'],
+.discuss--message textarea {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .discuss--message input[type='text'],
@@ -107,7 +111,7 @@
     left: -30px;
     width: 23px;
     height: 16px;
-    background: green url("") no-repeat center;
+    background: url("@{path-sprite}") 0 -76px
   }
 }
 .discuss--column__social-contact .social--contact {
@@ -115,24 +119,58 @@
 }
 .social-btn--discuss {
   display: block;
-  width: 100%;
+  position: relative;
   .margin(0 0 20px 0);
   &::after {
     content: "";
-    display: block;
-    width: 26px;
-    height: 26px;
-    background-color: green;
-    background-repeat: no-repeat;
-    background-position: center;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &:hover {
+    &::after{
+      opacity: 1;
+    }
   }
 }
-.social-btn--behance {}
-.social-btn--twitter {}
-.social-btn--dribbble {}
-.social-btn--forrst {}
-.social-btn--google-plus {}
-  
+.social-btn--discuss.social-btn--behance {
+  height: 16px;
+}
+.social-btn--discuss.social-btn--twitter {
+  height: 21px;
+}
+.social-btn--discuss.social-btn--dribbble,
+.social-btn--discuss.social-btn--forrst,
+.social-btn--discuss.social-btn--google-plus {
+  height: 26px;
+}
+.social-btn--behance::after {
+  background: url("@{path-sprite}") 0 -162px;
+	width: 26px;
+	height: 16px;
+}
+.social-btn--twitter::after {
+  background: url("@{path-sprite}") 0 -510px;
+	width: 26px;
+	height: 21px;
+}
+.social-btn--dribbble::after {
+  background: url("@{path-sprite}") 0 -178px;
+	width: 26px;
+	height: 26px;
+}
+.social-btn--forrst::after {
+  background: url("@{path-sprite}") 0 -322px;
+	width: 22px;
+	height: 26px;
+}
+.social-btn--google-plus::after {
+  background: url("@{path-sprite}") 0 -348px;
+	width: 26px;
+	height: 22px;
+}
 .discuss--map {
   height: 215px;
   background: url("../img/map.jpg") no-repeat center;

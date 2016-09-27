@@ -9,16 +9,18 @@
   text-align: center;
   .margin(0 0 69px 0);
   font-weight: 800;
-}
-.works--header h3::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  .margin(0 0 0 -114.5px);
-  bottom: -37px;
-  width: 229px;
-  height: 14px;
-  background: green url("") no-repeat center;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    .margin(0 0 0 -114.5px);
+    bottom: -37px;
+    width: 229px;
+    height: 14px;
+    background: url("@{path-sprite}") 0 -402px;
+	  width: 229px;
+	  height: 14px;
+  }
 }
 .text--semibold {
   font-weight: 600;
@@ -93,7 +95,7 @@
     left: 180px;
     width: 40px;
     height: 40px;
-    background-color: red;
+    background: url("@{path-sprite}") 0 -224px;
   }
 }
 .text--small-in-column {
