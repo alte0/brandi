@@ -56,14 +56,18 @@
 }
 .works--sorted {
   font-size: 0;
-  text-align: center;
+  overflow: hidden;
+  height: 600px;
+  background-color: red;
+  width: 1600px;
+  .margin(0 auto);
 }
 .work--column-in-job {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  width: 400px;
-  height: 300px;
+  max-width: 400px;
+  max-height: 300px;
 }
 .work--column-in-job img {
   max-width: 100%;
@@ -77,20 +81,20 @@
   top: 0;
   display: none;
   background-color: rgba(33, 179, 144, 0.9);;
-  width: 240px;
-  height: 137px;
+  // width: 240px;
+  // height: 137px;
   text-align: center;
   color: white;
   .padding(163px 80px 0 80px);
-}
-.work--description::before {
-  content: "";
-  position: absolute;
-  top: 94px;
-  left: 180px;
-  width: 40px;
-  height: 40px;
-  background-color: red;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 94px;
+    left: 180px;
+    width: 40px;
+    height: 40px;
+    background-color: red;
+  }
 }
 .text--small-in-column {
   font-size: 14px;
