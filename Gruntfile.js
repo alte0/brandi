@@ -7,7 +7,7 @@ module.exports = function(grunt) {
       dev: {
         files: {
           // компилируем less - куда:откуда
-          "build/css/style.css": "less/style.less"
+          "build/css/style.css": "src/less/style.less"
         }
       }
     },
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
       //название конфига
       symbols: {
         files: {
-          "build/img/symbols.svg" : ["img/icons/*.svg"]
+          "build/img/symbols.svg" : ["src/img/icons/*.svg"]
         },
         options: {
         prefix : 'icon-', // This will prefix each ID
@@ -96,15 +96,19 @@ module.exports = function(grunt) {
     watch: {
       style: {
         // изменились less файлы запускаем tasks
-        files: ["less/**/*.less"],
+        files: ["src/less/**/*.less"],
         tasks: ["less", "postcss", "csso"]
       },
-      html: {
-        files: ["*.html"],
-        tasks: ["copy:html"]
+      // html: {
+      //   files: ["src/*.html"],
+      //   tasks: ["copy:html"]
+      // },
+      pug: {
+        files: ["src/*.pug"],
+        tasks: ["pug"]
       },
       img: {
-        files: ["img/**/*.*"],
+        files: ["src/img/**/*.*"],
         tasks: ["build"]
       }
     },
@@ -114,23 +118,27 @@ module.exports = function(grunt) {
       build: {
         files: [{
           expand: true,
+          //makes all src relative to cwd (относительно какой папки брать())
+          cwd: 'src/',
           src: [
           "fonts/**/*.{woff,woff2}",
           "img/**",
-          "js/**",
-          "*.html"
+          "js/**"
+          // ,
+          // "*.html"
           ],
           //куда копировать
           dest: "build"
         }]
-      },
-      html: {
-        files: [{
-          expand: true,
-          src: ["*.html"],
-          dest: "build"
-        }]
       }
+      // ,
+      // html: {
+      //   files: [{
+      //     expand: true,
+      //     src: ["src/*.html"],
+      //     dest: "build"
+      //   }]
+      // }
     },
 
     //удаляем папку перед копированием
@@ -148,10 +156,28 @@ module.exports = function(grunt) {
           baseDir: "build/."
         }
       }
+    },
+
+    pug: {
+        options: {
+          pretty: true,
+          data: {
+            debug: false
+          }
+        },
+        files: {
+          expand: true,
+          cwd: 'src/',
+          src: ['*.pug'],
+          dest: 'build',
+          ext: '.html'
+        }
     }
 
 
   });
+
+
 
     grunt.registerTask("serve", ["watch"]);
     grunt.registerTask("symbols", ["svgmin", "svgstore"]);
@@ -162,7 +188,8 @@ module.exports = function(grunt) {
       "postcss",
       "csso",
       "symbols",
-      "imagemin"
+      "imagemin",
+      "pug"
       ]);
 
 };
