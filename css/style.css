@@ -983,3 +983,13 @@ input[name="submit"] {
   background: url("../img/map.jpg") no-repeat center;
   background-size: cover;
 }
+.discuss--map-jsInvisibleMap,
+.discuss--map-js {
+  display: none;
+}
+.discuss--map-js {
+  height: 215px;
+}
+.discuss--map-jsShowMap {
+  display: block;
+}
