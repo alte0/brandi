@@ -110,6 +110,10 @@ module.exports = function(grunt) {
       img: {
         files: ["src/img/**/*.*"],
         tasks: ["build"]
+      },
+      rigger: {
+        files: ["src/js/**/*.*"],
+        tasks: ["rigger"]
       }
     },
 
@@ -122,8 +126,9 @@ module.exports = function(grunt) {
           cwd: 'src/',
           src: [
           "fonts/**/*.{woff,woff2}",
-          "img/**",
-          "js/**"
+          "img/**"
+          // ,
+          // "js/**"
           // ,
           // "*.html"
           ],
@@ -172,8 +177,19 @@ module.exports = function(grunt) {
           dest: 'build',
           ext: '.html'
         }
-    }
+    },
 
+    rigger: {
+      compile: {     
+        // options: {
+        //   banner: '/* THIS BANNER USES TEMPLATE FUNCTIONALITY <%= banner_property %> */\n',
+        //   footer: '\n/* SOME FOOTER */'
+        // },
+        files: {
+          'build/js/main.js': ['src/js/main.js']
+        }
+      }
+    }
 
   });
 
@@ -189,7 +205,8 @@ module.exports = function(grunt) {
       "csso",
       "symbols",
       "imagemin",
-      "pug"
+      "pug",
+      "rigger"
       ]);
 
 };

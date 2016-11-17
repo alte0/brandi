@@ -1,0 +1,20 @@
+{
+  "name": "brandi",
+  "description": "projet",
+  "main": "Gruntfile.js",
+  "authors": [
+    "alte0"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jQuery": "^3.1.1"
+  }
+}
