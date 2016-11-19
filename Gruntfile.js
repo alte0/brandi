@@ -151,16 +151,20 @@ module.exports = function(grunt) {
       build: ["build"]
     },
 
-    // no job !?!?!?!?!?!
+
+    // live-server local host
     browserSync: {
-      bsFiles: {
-        src : ["build/*.html", "build/css/*.css"]
-      },
-      options: {
-        server: {
-          baseDir: "build/."
+        dev: {
+            bsFiles: {
+                src : [
+                    "build/**/*.*"
+                ]
+            },
+            options: {
+                watchTask: true,
+                server: "build/."
+            }
         }
-      }
     },
 
     pug: {
@@ -195,7 +199,7 @@ module.exports = function(grunt) {
 
 
 
-    grunt.registerTask("serve", ["watch"]);
+    grunt.registerTask("serve", ["browserSync", "watch"]);
     grunt.registerTask("symbols", ["svgmin", "svgstore"]);
     grunt.registerTask("build", [
       "clean",

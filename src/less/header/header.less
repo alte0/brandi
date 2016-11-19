@@ -4,6 +4,7 @@
   background-image: url("../img/Header-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   .padding(0 0 50px 0);
 }
 .header--top {
@@ -13,6 +14,11 @@
 .logo--wrap {
   .padding (24px 0 0 0);
   .float();
+  @media (max-width:650px) {
+    .float(none);
+    width: 100%;
+    text-align: center;
+    }
 }
 .logo {
   font-family: @base-logo-font;
@@ -41,11 +47,21 @@
 }
 .header--nav {
   .float(right);
+    @media (max-width:650px) {
+      .float(none);
+      width: 100%;
+      }
 }
 .main-menu--lists {
   .margin();
   .padding();
   list-style: none;
+  @media (max-width:650px) {
+    margin: 0 auto;
+      }
+  @media (max-width:345px) {
+    .padding(0 60px);
+  }
 }
 .main-menu--item {
   .float();
@@ -61,6 +77,9 @@
     display: block;
     height: 1px;
     background-color: #32b0ee;
+    @media (max-width:650px) {
+      top: 55px;
+    }
   }
   &:first-child{
     .margin();
@@ -74,6 +93,9 @@
 }
 .header-slider {
   .padding(386px 0 0 0);
+  @media (max-width:650px) {
+    .padding(150px 0 0);
+  }
 }
 .header-slider input, .slide-1, .slide-2, .slide-3 {
   display: none;

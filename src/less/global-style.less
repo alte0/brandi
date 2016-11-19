@@ -64,17 +64,16 @@
     font-style: normal;
 
 }
-
+* {
+    box-sizing: border-box;
+}
 body {
   font-family: @base-font;
   font-size: @base-font-size;
   line-height: @base-line-height;
   .margin();
 }
-.container {
-  width: 1170px;
-  .margin(0 auto);
-}
+
 .clearfix {
   content: "";
   display: table;
@@ -84,4 +83,13 @@ body {
     display: block;
     clear: both;
   }
+}
+.container {
+    width: 100%;
+    padding: 0px 1%;
+    @media (min-width:1175px) {
+        width: 1170px;
+        padding: 0px;
+        .margin(0 auto);
+    }
 }
