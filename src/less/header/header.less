@@ -104,6 +104,11 @@
   position: absolute;
   top: 374px;
   right: 48px;
+  @media (max-width: 780px) {
+    top: 700px;
+    right: 50%;
+    transform: translateX(50%);
+  }
 }
 .btn-1::before, .btn-2::before, .btn-3::before {
   content: "";
@@ -114,6 +119,10 @@
   width: 6px;
   height: 6px;
   .margin(0 0 14px 0);
+  @media (max-width: 780px) {
+    display: inline-block;
+    .margin(0 15px 0 0);
+   }
 }
 #btn-1:checked ~ .slider--controls .btn-1::before,
 #btn-2:checked ~ .slider--controls .btn-2::before,
@@ -161,6 +170,9 @@
     height: 1px;
     width: 28px;
     background-color: #0feb9e;
+    @media (max-width:380px) {
+      display: none;
+    }
   }
   &&::before {
     left: -61px;
