@@ -60,25 +60,24 @@
 .works--sorted {
   font-size: 0;
   overflow: hidden;
-  height: 600px;
-  text-align: center;
-  min-width: 1170px;
-  max-width: 1600px;
+  // height: 600px;
+	max-width: 1600px;
   .margin(0 auto);
 }
 .work--column-in-job {
   display: inline-block;
   vertical-align: top;
   position: relative;
-  max-width: 400px;
+  // max-width: 400px;
+  width: 25%;
   max-height: 300px;
-}
-.work--column-in-job img {
-  max-width: 100%;
-  height: auto;
+  & img {
+    // max-width: initial;
+    // height: initial;
+  }
 }
 .work--description {
-  position: relative;
+  // font-size: 18px;
   font-size: 18px;
   font-weight: bold;
   position: absolute;
@@ -86,15 +85,18 @@
   display: none;
   background-color: rgba(33, 179, 144, 0.9);;
   // width: 240px;
-  height: 137px;
   text-align: center;
   color: white;
-  .padding(163px 80px 0 80px);
+  // .padding(163px 80px 0 80px);
+  .padding(54.33333333333333% 20% 0 20%);
   &::before {
     content: "";
     position: absolute;
-    top: 94px;
-    left: 180px;
+    // top: 94px;
+    top: 31.33333333333333%;
+    // left: 180px;
+    left: 50%;
+		transform: translateX(-50%);
     width: 40px;
     height: 40px;
     background: url("@{path-sprite}") 0 -224px;
