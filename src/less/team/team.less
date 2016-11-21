@@ -64,7 +64,6 @@
   font-size: 0;
 }
 .team--iteam-column {
-  position: relative;
   display: inline-block;
   vertical-align: top;
   font-size: 13px;
@@ -74,6 +73,15 @@
   text-align: center;
   // .margin(0 0 0 30px);
   .margin(0 0 0 2.56410256410256%);
+	// @media (max-width: 768px) {
+	// 	width: 50%;
+	// }
+}
+.team--iteam-column_wrap {
+	position: relative;
+	& img {
+		display: block;
+	}
 }
 .team--surname {
   font-size: 18px;
@@ -95,13 +103,13 @@
   display: none;
   color: white;
   position: absolute;
-  top: 0;
+  bottom: 0;
+	height: 100%;
   // font-size: 16px;
 	font-size: 0.8888888888888889em; /*16/24*/
   background-color: rgba(14, 180, 147, 0.95);
   // width: 224px;
   // width: 19.14529914529915%;
-  // height: 100%;
   // max-height: 300px;
   // .padding(18px 23px 0 23px);M
   .padding(6% 8.51851851851852% 0 8.51851851851852%);
