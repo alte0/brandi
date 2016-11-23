@@ -1,7 +1,7 @@
 (function($, undefined) {
 	$(function() {
-		// code write
 
+		// maps
 		var $closeStaticMap = $('.discuss--map');
 		var $openJsMap = $('.discuss--map-js');
 		var $searchiIframe = $openJsMap.find('iframe');
@@ -35,7 +35,6 @@
 				$(this).find('input[name=name]').val() === '' ||
 				$(this).find('input[name=email]').val() === '' ||
 				$(this).find('textarea[name=message]').val() === '' ) {
-					// modalWindow.css('display', 'block');
 					modalWindow.fadeIn(300);
 					return false;
 				}
@@ -45,6 +44,40 @@
 				modalWindow.fadeOut(500);
 			});
 
+			//button up
+			var buttonUp = $('<button>', {
+				type: 'button',
+				class: 'buttonUp',
+				text: 'UP'
+			});
+			buttonUp.appendTo($('body'));
+			var buttonUpBreakpont = 300;
+			var activateButtonUp = 'buttonUp_active';
+			$(window).on('scroll load', function(event) {
+				event.preventDefault();
+				/* Act on the event */
+				if ( $(this).scrollTop()>buttonUpBreakpont ) {
+					// buttonUp.addClass(activateButtonUp);
+					buttonUp.fadeIn(300);
+				} else {
+					// buttonUp.removeClass(activateButtonUp);
+					buttonUp.fadeOut(300);
+				}
+			});
+			buttonUp.on('click', function(event) {
+				/* Act on the event */
+				$('html, body').animate({
+					scrollTop: 0
+				}, 500);
+			});
+
+			//animate menu to id
+			$('.main-menu--item > a').on('click', function(event) {
+				/* Act on the event */
+				$(this).animate({
+					scrollTop: 5000
+				}, 500);
+			});
 		//yandex map api
 		// var myMap;
 		// function init (ymaps) {

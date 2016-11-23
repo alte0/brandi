@@ -130,11 +130,29 @@ img {
 	.padding(5px 15px);
 	border-radius: 15px;
 }
-.buttonClose:hover {
+.buttonClose:hover, .buttonUp:hover {
 	background-color: green;
 	color: white;
 	border: 2px solid green;
 }
 .openModal {
+	display: block;
+}
+.buttonUp {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	cursor: pointer;
+	background-color: white;
+	color: green;
+	border: 2px solid green;
+	outline: none;
+	display: block;
+	background-color: white;
+	.padding(5px 15px);
+	border-radius: 15px;
+	display: none;
+}
+.buttonUp_active {
 	display: block;
 }
