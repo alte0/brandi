@@ -1,5 +1,13 @@
-include head.pug
-body
-	include header.pug
-	block content
-	include footer.pug
+doctype html
+html(lang="ru")
+	head
+		meta(charset='UTF-8')
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		title Brandi
+		link(rel='stylesheet', href='css/style.min.css')
+		script(src='js/main.js')
+		script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=init&load=Map', type='text/javascript')
+	body
+		include header.pug
+		block content
+		include footer.pug
