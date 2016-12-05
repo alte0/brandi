@@ -23,6 +23,7 @@
 		});
 		messageBadForm.appendTo(modalWindow);
 
+		//кнопка закрытия формы
 		var buttonClose = $('<button>', {
 			class: 'buttonClose',
 			type: 'button',
@@ -30,6 +31,7 @@
 		});
 		buttonClose.appendTo(messageBadForm);
 
+		// проверка формы
 		$('form.discuss--message').submit(function() {
 			if (
 				$(this).find('input[name=name]').val() === '' ||
@@ -55,7 +57,6 @@
 			var activateButtonUp = 'buttonUp_active';
 			$(window).on('scroll load', function(event) {
 				event.preventDefault();
-				/* Act on the event */
 				if ( $(this).scrollTop()>buttonUpBreakpont ) {
 					// buttonUp.addClass(activateButtonUp);
 					buttonUp.fadeIn(300);
@@ -65,18 +66,19 @@
 				}
 			});
 			buttonUp.on('click', function(event) {
-				/* Act on the event */
 				$('html, body').animate({
 					scrollTop: 0
 				}, 500);
 			});
 
 			//animate menu to id
-			$('.main-menu--item > a').on('click', function(event) {
-				/* Act on the event */
-				$(this).animate({
-					scrollTop: 5000
-				}, 500);
+			$('.main-menu--item').on('click', 'a', function(event) {
+				event.preventDefault();
+				var elementId = $(this).attr('href');
+				var elementPositionTop = $(elementId).offset().top;
+				$('html, body').animate({
+					scrollTop: elementPositionTop
+				}, 1000);
 			});
 		//yandex map api
 		// var myMap;
