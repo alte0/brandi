@@ -28,6 +28,7 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 		});
 		messageBadForm.appendTo(modalWindow);
 
+		//кнопка закрытия формы
 		var buttonClose = $('<button>', {
 			class: 'buttonClose',
 			type: 'button',
@@ -35,6 +36,7 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 		});
 		buttonClose.appendTo(messageBadForm);
 
+		// проверка формы
 		$('form.discuss--message').submit(function() {
 			if (
 				$(this).find('input[name=name]').val() === '' ||
@@ -60,7 +62,6 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 			var activateButtonUp = 'buttonUp_active';
 			$(window).on('scroll load', function(event) {
 				event.preventDefault();
-				/* Act on the event */
 				if ( $(this).scrollTop()>buttonUpBreakpont ) {
 					// buttonUp.addClass(activateButtonUp);
 					buttonUp.fadeIn(300);
@@ -70,18 +71,19 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 				}
 			});
 			buttonUp.on('click', function(event) {
-				/* Act on the event */
 				$('html, body').animate({
 					scrollTop: 0
 				}, 500);
 			});
 
 			//animate menu to id
-			$('.main-menu--item > a').on('click', function(event) {
-				/* Act on the event */
-				$(this).animate({
-					scrollTop: 5000
-				}, 500);
+			$('.main-menu--item').on('click', 'a', function(event) {
+				event.preventDefault();
+				var elementId = $(this).attr('href');
+				var elementPositionTop = $(elementId).offset().top;
+				$('html, body').animate({
+					scrollTop: elementPositionTop
+				}, 1000);
 			});
 		//yandex map api
 		// var myMap;
