@@ -9,9 +9,9 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 		// maps
 		var $closeStaticMap = $('.discuss--map');
 		var $openJsMap = $('.discuss--map-js');
-		var $searchiIframe = $openJsMap.find('iframe');
+		var $searchIframe = $openJsMap.find('iframe');
 
-		$searchiIframe.on('load', function() {
+		$searchIframe.on('load', function() {
 				$closeStaticMap.addClass('discuss--map-jsInvisibleMap');
 				$openJsMap.addClass('discuss--map-jsShowMap');
 		});
@@ -47,6 +47,7 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 				}
 			});
 
+			// button close error form
 			buttonClose.on('click', function() {
 				modalWindow.fadeOut(500);
 			});
@@ -85,15 +86,11 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 					scrollTop: elementPositionTop
 				}, 1000);
 			});
-		//yandex map api
-		// var myMap;
-		// function init (ymaps) {
-		// 	myMap = new ymaps.Map("discuss--map-js", {
-		// 		center: [55.87, 37.66],
-		// 		zoom: 10
-		// 	});
-		//
-		// }
+
+			var cheked = $('.team-slider').children('input').next('input');
+			cheked.attr('checked', 'checked');
+
+
 
 	});
 })(jQuery);
