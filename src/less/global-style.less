@@ -113,7 +113,13 @@ img {
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%) ;
 	text-align: center;
+	animation: 1s formupdown ease-in-out forwards;
 	.padding(30px 30px 50px 30px);
+}
+@keyframes formupdown {
+	0% {transform: translateX(-50%) translateY(-300%)}
+	50% {transform: translateX(-50%) translateY(0%)}
+	100% {transform: translateX(-50%) translateY(-50%)}
 }
 .buttonClose {
 	position: absolute;
