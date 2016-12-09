@@ -162,7 +162,8 @@ module.exports = function(grunt) {
             },
             options: {
                 watchTask: true,
-                server: "build/."
+                server: "build/.",
+								directory: true
             }
         }
     },
@@ -184,7 +185,7 @@ module.exports = function(grunt) {
     },
 
     rigger: {
-      compile: {     
+      compile: {
         // options: {
         //   banner: '/* THIS BANNER USES TEMPLATE FUNCTIONALITY <%= banner_property %> */\n',
         //   footer: '\n/* SOME FOOTER */'
