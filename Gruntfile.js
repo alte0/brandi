@@ -59,38 +59,38 @@ module.exports = function(grunt) {
       }
     },
 
-    //собираем svg срайт
-    svgstore: {
-      options: {
-        svg: {
-          //прячем инлайн svg из html
-          style: "display: none"
-        }
-      },
-      //название конфига
-      symbols: {
-        files: {
-          "build/img/symbols.svg" : ["src/img/icons/*.svg"]
-        },
-        options: {
-        prefix : 'icon-', // This will prefix each ID
-        svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
-          viewBox : '0 0 100 100',
-          xmlns: 'http://www.w3.org/2000/svg'
-        }
-      }
-      }
-    },
+    // //собираем svg срайт
+    // svgstore: {
+    //   options: {
+    //     svg: {
+    //       //прячем инлайн svg из html
+    //       style: "display: none"
+    //     }
+    //   },
+    //   //название конфига
+    //   symbols: {
+    //     files: {
+    //       "build/img/symbols.svg" : ["src/img/icons/*.svg"]
+    //     },
+    //     options: {
+    //     prefix : 'icon-', // This will prefix each ID
+    //     svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
+    //       viewBox : '0 0 100 100',
+    //       xmlns: 'http://www.w3.org/2000/svg'
+    //     }
+    //   }
+    //   }
+    // },
 
-    //минифицируем svg
-    svgmin: {
-      symbols: {
-        files: [{
-          expand: true,
-          src: ["build/img/icons/*.svg"]
-        }]
-      }
-    },
+    // //минифицируем svg
+    // svgmin: {
+    //   symbols: {
+    //     files: [{
+    //       expand: true,
+    //       src: ["build/img/icons/*.svg"]
+    //     }]
+    //   }
+    // },
 
     // следим за изменениями
     watch: {
@@ -125,7 +125,8 @@ module.exports = function(grunt) {
           //makes all src relative to cwd (относительно какой папки брать())
           cwd: 'src/',
           src: [
-          "fonts/**/*.{woff,woff2}",
+          // "fonts/**/*.{woff,woff2}",
+          "fonts/**/*.*",
           "img/**"
           // ,
           // "js/**"
@@ -201,14 +202,14 @@ module.exports = function(grunt) {
 
 
     grunt.registerTask("serve", ["browserSync", "watch"]);
-    grunt.registerTask("symbols", ["svgmin", "svgstore"]);
+    // grunt.registerTask("symbols", ["svgmin", "svgstore"]);
     grunt.registerTask("build", [
       "clean",
       "copy",
       "less",
       "postcss",
       "csso",
-      "symbols",
+      // "symbols",
       "imagemin",
       "pug",
       "rigger"

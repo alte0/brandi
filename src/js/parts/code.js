@@ -82,10 +82,39 @@
 				}, 1000);
 			});
 
-			var cheked = $('.team-slider').children('input').next('input');
-			cheked.attr('checked', 'checked');
-
-
-
+			//slick
+			$('.header-slider .slider--slides').slick({
+				dots: true,
+			  infinite: true,
+			  speed: 1000,
+			  slidesToShow: 1,
+			  adaptiveHeight: true,
+				slidesToScroll: 1,
+			  autoplay: true,
+			  autoplaySpeed: 2500,
+				arrows: false
+      });
+			$('.feature-slider .slider--slides').slick({
+				dots: true,
+			  infinite: true,
+			  speed: 1000,
+			  slidesToShow: 1,
+			  adaptiveHeight: true,
+				slidesToScroll: 1,
+			  autoplay: true,
+			  autoplaySpeed: 3000,
+				arrows: false
+			});
+			$('.team-slider .slider--slides').slick({
+				dots: true,
+			  infinite: true,
+			  speed: 1000,
+			  slidesToShow: 1,
+			  adaptiveHeight: true,
+				slidesToScroll: 1,
+			  autoplay: true,
+			  autoplaySpeed: 3500,
+				arrows: false
+			});
 	});
 })(jQuery);

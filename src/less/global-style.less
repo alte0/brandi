@@ -162,3 +162,33 @@ img {
 .buttonUp_active {
 	display: block;
 }
+// style slick slider
+.slick-dots {
+	.padding();
+	.margin();
+}
+.slick-dots button {
+	border-radius: 50%;
+	border: none;
+	outline: none;
+	width: 6px;
+	height: 6px;
+	font-size: 0;
+	cursor: pointer;
+	background-color: transparent;
+	.padding();
+}
+.feature-slider .slick-dots, .team-slider .slick-dots {
+	text-align: center;
+}
+.feature-slider .slick-dots li, .team-slider .slick-dots li {
+	display: inline-block;
+}
+
+.feature-slider button, .team-slider button {
+	border: 1px solid rgba(19, 44, 62, 0.2);
+	.margin(0 14px 0 0);
+}
+.feature-slider .slick-active button, .team-slider .slick-active button{
+	background-color: #062033;
+}
