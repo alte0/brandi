@@ -6,8 +6,24 @@ html(lang="EN")
 		title Brandi
 		link(rel='stylesheet', href='css/style.min.css')
 		//- link(rel='stylesheet', href='css/style.css')
+		script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU', type='text/javascript')
 		script(src='js/main.js')
 	body
 		include header.pug
 		block content
 		include footer.pug
+		script(type='text/javascript').
+			ymaps.ready(init);
+			var myMap;
+			function init(){myMap = new ymaps.Map("discuss--map-js", {
+				center: [57.13726821, 65.54499550],
+				zoom: 10,
+				});
+			var myPlacemark = new ymaps.Placemark([57.13726821, 65.54499550], {
+				hintContent: 'Тюмень!',
+				balloonContent: 'Тюмень - столица деревень!'
+				});
+			myMap.geoObjects.add(myPlacemark);
+			myMap.behaviors.disable('scrollZoom');
+			}
+		// yandex api maps

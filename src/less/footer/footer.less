@@ -75,6 +75,10 @@
   color: white;
   text-decoration: none;
   line-height: 32px;
+	&:hover {
+		color: #333;
+		text-decoration: underline;;
+	}
 }
 p.copy-right {
   .margin(49px 0 0 0);
@@ -124,6 +128,10 @@ input[name="submit"] {
   background: url("@{path-sprite}") 0 -416px;
   .margin(0 9px 0 9px);
 }
-.copy-right, .text-black {
+.copy-right, .text-black>a{
   color: #062033;
+}
+.text-black>a:hover {
+	color: #333;
+	text-decoration: underline;;
 }

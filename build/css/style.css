@@ -49,6 +49,9 @@ body {
   line-height: 24px;
   margin: 0px;
 }
+a {
+  text-decoration: none;
+}
 img {
   max-width: 100%;
   height: auto;
@@ -124,8 +127,8 @@ img {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  color: green;
-  border: 2px solid green;
+  color: #1ea78d;
+  border: 2px solid #1ea78d;
   outline: none;
   display: block;
   background-color: white;
@@ -134,9 +137,9 @@ img {
 }
 .buttonClose:hover,
 .buttonUp:hover {
-  background-color: green;
+  background-color: #1ea78d;
   color: white;
-  border: 2px solid green;
+  border: 2px solid #1ea78d;
 }
 .openModal {
   display: block;
@@ -146,11 +149,12 @@ img {
   right: 20px;
   bottom: 20px;
   cursor: pointer;
-  color: green;
-  border: 2px solid green;
+  color: #1ea78d;
+  border: 2px solid #1ea78d;
   outline: none;
   display: block;
   background-color: white;
+  box-shadow: 0px 0px 3px 0px green;
   padding: 5px 15px;
   border-radius: 15px;
   display: none;
@@ -246,7 +250,8 @@ img {
   font-size: 13px;
   position: relative;
 }
-.main-menu--item__active::before {
+.main-menu--item__active::before,
+.main-menu--item:hover::before {
   content: "";
   position: absolute;
   top: 0;
@@ -427,6 +432,10 @@ img {
   text-decoration: none;
   line-height: 32px;
 }
+.explore--item a:hover {
+  color: #333;
+  text-decoration: underline;
+}
 p.copy-right {
   margin: 49px 0 0 0;
 }
@@ -470,8 +479,12 @@ input[name="submit"] {
   margin: 0 9px 0 9px;
 }
 .copy-right,
-.text-black {
+.text-black > a {
   color: #062033;
+}
+.text-black > a:hover {
+  color: #333;
+  text-decoration: underline;
 }
 .feature {
   background-color: #f4f7f9;
@@ -519,16 +532,16 @@ input[name="submit"] {
   top: -1px;
   left: -56px;
   width: 40px;
-  height: 40px;
+  height: 41px;
 }
 .column__branding::before {
-  background: url("../img/sprite.png") 0 -282px;
+  background: url("../img/sprite.png") 0 -281px;
 }
 .column__development::before {
-  background: url("../img/sprite.png") 0 -470px;
+  background: url("../img/sprite.png") 0 -469px;
 }
 .column__consulting::before {
-  background: url("../img/sprite.png") 0 -430px;
+  background: url("../img/sprite.png") 0 -429px;
 }
 .column h3 {
   font-size: 20px;
@@ -1249,7 +1262,8 @@ input[name="submit"] {
   .main-menu--lists {
     margin: 0 auto;
   }
-  .main-menu--item__active::before {
+  .main-menu--item__active::before,
+  .main-menu--item:hover::before {
     top: 55px;
   }
   .header-slider {

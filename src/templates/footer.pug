@@ -10,7 +10,7 @@ footer.page-footer
 			.footer--column-header
 				h3 Subscribe
 			form.subscribe(action='subscribe.html', method='post')
-				input(type='email', name='subscribe', value='')
+				input(type='email', name='subscribe', value='', required)
 				input(type='image', name='submit', src='img/icons/arrow.png', alt='ОК')
 			p eusmod tempor incididunt ut labore et dolore magna aliqua.
 		.footer--column
@@ -36,9 +36,9 @@ footer.page-footer
 					a(href='#') Yahoo
 		.footer--column
 			p.text-border-left
-				| Created with 
+				| Created with
 				i.heart
-				|  by 
-				span.text-black themecurve
+				|  by
+				span.text-black: a(href="https://www.behance.net/themecurve", target="_blank") themecurve
 				| , exclusive for kreativeshowcase
 			p.copy-right © 2014 Brandi. All Rights Reserved.

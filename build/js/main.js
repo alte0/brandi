@@ -2901,12 +2901,10 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 		// maps
 		var $closeStaticMap = $('.discuss--map');
 		var $openJsMap = $('.discuss--map-js');
-		var $searchIframe = $openJsMap.find('iframe');
 
-		$searchIframe.on('load', function() {
-				$closeStaticMap.addClass('discuss--map-jsInvisibleMap');
-				$openJsMap.addClass('discuss--map-jsShowMap');
-		});
+		$closeStaticMap.addClass('discuss--map-jsInvisibleMap');
+		$openJsMap.addClass('discuss--map-jsShowMap');
+
 
 		//message error form
 		var modalWindow = $('<div>', {

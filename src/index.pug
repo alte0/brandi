@@ -75,11 +75,12 @@ block content
 			-i=1
 			while i<9
 				.work--column-in-job
-					img(src='img/pic-work-'+i+'.jpg', alt='pic-work')
-					.work--description
-						span Labore et dolore magnam
-						span.text--small-in-column Photography
-						-i++
+					a(href="#")
+						img(src='img/pic-work-'+i+'.jpg', alt='pic-work')
+						.work--description
+							span Labore et dolore magnam
+							span.text--small-in-column Photography
+							-i++
 	// end works
 
 	section#team.team
@@ -295,7 +296,7 @@ block content
 				.discuss--column.discuss--column__contact
 					p.text--discuss--slogan Cras at ultrices erat, sed vulputate!
 					p.text--contacts
-						| 2345 Setwant natrer, 1234, Washington. United States. (401) 1234 567 hello@brandi.com ww.brandi.com
+						| 2345 Setwant natrer, 1234, Washington. United States. (401) 1234 567 hello@brandi.com www.brandi.com
 				.discuss--column.discuss--column__message
 					form.discuss--message.clearfix(action='message.html', method='post')
 						h3.discuss--message__title Say hello!
@@ -314,7 +315,6 @@ block content
 		.discuss--maps
 			.discuss--map
 			.discuss--map-js
-				iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d138420.96816986377!2d65.43191612903851!3d57.17419406357071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43bbe15d51a3b8c7%3A0x9b137b6a2aa36793!2z0KLRjtC80LXQvdGMLCDQotGO0LzQtdC90YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1479362829711', width='100%', height='215',  style='border:0')
-			//- #discuss--map-js(style='width: 100%; height: 215px;')
+				#discuss--map-js(style='width: 100%; height: 215px;')
 
 	// end discuss
