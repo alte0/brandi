@@ -200,3 +200,16 @@ img {
 	0% {transform: translateY(-100%);opacity: 0;}
 	100% {transform: translateY(0%);opacity: 1;}
 }
+.hidden{
+  opacity:0;
+}
+.visible{
+     animation: visible 1s ease-in-out;
+}
+.full-visible {
+	opacity:1;
+}
+@keyframes visible {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}

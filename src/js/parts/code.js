@@ -114,5 +114,22 @@
 			  autoplaySpeed: 3500,
 				arrows: false
 			});
+			// viewportChecker and animate
+			var arrClass = [];
+			arrClass.push($('.page-header'));
+			arrClass.push($('.feature'));
+			arrClass.push($('.works'));
+			arrClass.push($('.team'));
+			arrClass.push($('.some-fun-fact'));
+			arrClass.push($('.discuss'));
+			arrClass.push($('.page-footer'));
+
+			$.each(arrClass, function(index, element) {
+				element.addClass('hidden').viewportChecker({
+					classToAdd: 'visible',
+					classToRemove: 'hidden'
+				});
+			});
+
 	});
 })(jQuery);
