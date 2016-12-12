@@ -194,6 +194,30 @@ img {
 .team-slider .slick-active button {
   background-color: #062033;
 }
+@-webkit-keyframes hoverUpDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes hoverUpDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
 .page-header {
   position: relative;
   background-color: #0d2f28;
@@ -633,6 +657,7 @@ input[name="submit"] {
   position: relative;
   width: 25%;
   max-height: 300px;
+  overflow: hidden;
 }
 .work--column-in-job img {
   display: block;
@@ -648,6 +673,8 @@ input[name="submit"] {
   background-color: rgba(33, 179, 144, 0.9);
   width: 100%;
   text-align: center;
+  -webkit-animation: hoverUpDown 0.5s ease-in-out;
+          animation: hoverUpDown 0.5s ease-in-out;
   padding: 53.33333333% 0 0 0;
 }
 .work--description span {
@@ -753,6 +780,8 @@ input[name="submit"] {
   font-size: 1.230769230769231em;
   /*16/13*/
   background-color: rgba(14, 180, 147, 0.95);
+  -webkit-animation: hoverUpDown 0.5s ease-in-out;
+          animation: hoverUpDown 0.5s ease-in-out;
   padding: 6% 8.51851852% 0 8.51851852%;
 }
 .team--iteam-column:hover .teem--desc-and-social-contact {
