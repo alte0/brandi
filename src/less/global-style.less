@@ -207,13 +207,13 @@ img {
 	opacity:1;
 }
 .animated {
-	animation-duration: 1s;
-	// animation-fill-mode: both;
+	animation-duration: 1.5s;
+	animation-fill-mode: both;
 }
 .animated.fadeIn {
-	animation-name: fadeIn;
+	animation-name: fadeInDown;
 }
-@keyframes fadeIn {
-	0% {opacity: 0;}
-	100% {opacity: 1;}
+@keyframes fadeInDown {
+	0% {opacity: 0;transform: translateY(-40px)}
+	100% {opacity: 1;transform: translateY(0)}
 }
