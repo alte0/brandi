@@ -2,11 +2,11 @@
 	$(function() {
 
 		// maps
-		var $closeStaticMap = $('.discuss--map');
-		var $openJsMap = $('.discuss--map-js');
+		var $closeStaticMap = $('.discuss__map');
+		var $openJsMap = $('.discuss__map_js');
 
-		$closeStaticMap.addClass('discuss--map-jsInvisibleMap');
-		$openJsMap.addClass('discuss--map-jsShowMap');
+		$closeStaticMap.addClass('discuss__map_jsInvisibleMap');
+		$openJsMap.addClass('discuss__map_jsShowMap');
 
 
 		//message error form
@@ -30,7 +30,7 @@
 		buttonClose.appendTo(messageBadForm);
 
 		// проверка формы
-		$('form.discuss--message').submit(function() {
+		$('form.discuss__message').submit(function() {
 			if (
 				$(this).find('input[name=name]').val() === '' ||
 				$(this).find('input[name=email]').val() === '' ||
@@ -71,7 +71,7 @@
 			});
 
 			//animate menu to id
-			$('.main-menu--item').on('click', 'a', function(event) {
+			$('.main-menu__item').on('click', 'a', function(event) {
 				event.preventDefault();
 				var elementId = $(this).attr('href');
 				var elementPositionTop = $(elementId).offset().top;
@@ -81,7 +81,7 @@
 			});
 
 			//slick
-			$('.header-slider .slider--slides').slick({
+			$('.header-slider .slider__slides').slick({
 				dots: true,
 			  infinite: true,
 			  speed: 1000,
@@ -92,7 +92,7 @@
 			  autoplaySpeed: 2500,
 				arrows: false
       });
-			$('.feature-slider .slider--slides').slick({
+			$('.feature-slider .slider__slides').slick({
 				dots: true,
 			  infinite: true,
 			  speed: 1000,
@@ -103,7 +103,7 @@
 			  autoplaySpeed: 3000,
 				arrows: false
 			});
-			$('.team-slider .slider--slides').slick({
+			$('.team-slider .slider__slides').slick({
 				dots: true,
 			  infinite: true,
 			  speed: 1000,
@@ -116,7 +116,8 @@
 			});
 			// viewportChecker and animate
 			var arrClass = [];
-			arrClass.push($('.page-header'));
+			arrClass.push($('.header--top'));
+			arrClass.push($('.header-slider'));
 			arrClass.push($('.feature'));
 			arrClass.push($('.works'));
 			arrClass.push($('.team'));
@@ -124,12 +125,14 @@
 			arrClass.push($('.discuss'));
 			arrClass.push($('.page-footer'));
 
-			$.each(arrClass, function(index, element) {
-				element.addClass('hidden').viewportChecker({
-					classToAdd: 'visible',
-					classToRemove: 'hidden'
-				});
-			});
+			// $.each(arrClass, function(index, element) {
+			// 	element.addClass('hidden').viewportChecker({
+			// 		classToAdd: 'visible animated fadeIn',
+			// 		// classToAddForFullView: 'visible',
+			// 		// classToRemove: 'hidden'
+			// 		offset: 100
+			// 	});
+			// });
 
 	});
 })(jQuery);

@@ -2,17 +2,10 @@ extends templates/layout.pug
 block content
 	section#feature.feature
 		.container
-			header.feature--header
+			header.feature__header
 				h3 Features
 			.feature-slider
-				//- input#btn-4(type='radio', name='toggle2', checked='')
-				//- input#btn-5(type='radio', name='toggle2')
-				//- input#btn-6(type='radio', name='toggle2')
-				//- .slider--controls
-				//- 	label.btn-4(for='btn-4')
-				//- 	label.btn-5(for='btn-5')
-				//- 	label.btn-6(for='btn-6')
-				.slider--slides
+				.slider__slides
 					.slide-1
 						.column.column__branding
 							h3 Branding
@@ -55,266 +48,255 @@ block content
 	// end feature
 	section#works.works
 		.container
-			header.works--header
+			header.works__header
 				h3 Works
-			p.text--semibold
+			p.text__semibold
 				| Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-			form.works--filter(action='works.html', method='post')
-				ul.works--list
-					li.works--item.works--item__active
+			form.works__filter(action='works.html', method='post')
+				ul.works__list
+					li.works__item.works__item__active
 						a(href='#') All
-					li.works--item
+					li.works__item
 						a(href='#') Branding
-					li.works--item
+					li.works__item
 						a(href='#') Web
-					li.works--item
+					li.works__item
 						a(href='#') Logo Desing
-					li.works--item
+					li.works__item
 						a(href='#') Photography
-		.works--sorted
+		.works__sorted
 			-i=1
 			while i<9
-				.work--column-in-job
+				.work__column-in-job
 					a(href="#")
 						img(src='img/pic-work-'+i+'.jpg', alt='pic-work')
-						.work--description
+						.work__description
 							span Labore et dolore magnam
-							span.text--small-in-column Photography
+							span.text__small-in-column Photography
 							-i++
 	// end works
 
 	section#team.team
 		.container
-			header.team--header
+			header.team__header
 				h3 Meet our team
-				p.text--semibold
+				p.text__semibold
 					| Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
 			.team-slider
-				//- input#btn-7(type='radio', name='toggle3', checked='')
-				//- input#btn-8(type='radio', name='toggle3')
-				//- input#btn-9(type='radio', name='toggle3')
-				//- .slider--controls
-				//- 	label.btn-7(for='btn-7')
-				//- 	label.btn-8(for='btn-8')
-				//- 	label.btn-9(for='btn-9')
-				.slider--slides
+				.slider__slides
 					.slide-1
-						.team--list
-							.team--iteam-column
-								.team--iteam-column_wrap
+						.team__list
+							.team__iteam-column
+								.team__iteam-column_wrap
 									img(src='img/photo-1.jpg', alt='photo')
-									.teem--desc-and-social-contact
-										span.text--desc-bold Nemo enim ipsam voluptatem quia voluptas
-										span.text--desc
+									.teem__desc-and-social-contact
+										span.text__desc-bold Nemo enim ipsam voluptatem quia voluptas
+										span.text__desc
 											| sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-										.social--contact
-											a.social-btn.social-btn--twitter(href='')
-											a.social-btn.social-btn--facebook(href='')
-											a.social-btn.social-btn--google-plus(href='')
-								span.team--surname John Filmr Doe
-								span.teem--specialization Managing Director
-							.team--iteam-column
-								.team--iteam-column_wrap
+										.social__contact
+											a.social-btn.social-btn_twitter(href='')
+											a.social-btn.social-btn_facebook(href='')
+											a.social-btn.social-btn_google-plus(href='')
+								span.team__surname John Filmr Doe
+								span.teem__specialization Managing Director
+							.team__iteam-column
+								.team__iteam-column_wrap
 									img(src='img/photo-2.jpg', alt='photo')
-									.teem--desc-and-social-contact
-										span.text--desc-bold Nemo enim ipsam voluptatem quia voluptas
-										span.text--desc
+									.teem__desc-and-social-contact
+										span.text__desc-bold Nemo enim ipsam voluptatem quia voluptas
+										span.text__desc
 											| sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-										.social--contact
-											a.social-btn.social-btn--twitter(href='')
-											a.social-btn.social-btn--facebook(href='')
-											a.social-btn.social-btn--google-plus(href='')
-								span.team--surname Chystine Hineu
-								span.teem--specialization Lead Designer
-							.team--iteam-column
-								.team--iteam-column_wrap
+										.social__contact
+											a.social-btn.social-btn_twitter(href='')
+											a.social-btn.social-btn_facebook(href='')
+											a.social-btn.social-btn_google-plus(href='')
+								span.team__surname Chystine Hineu
+								span.teem__specialization Lead Designer
+							.team__iteam-column
+								.team__iteam-column_wrap
 									img(src='img/photo-3.jpg', alt='photo')
-									.teem--desc-and-social-contact
-										span.text--desc-bold Nemo enim ipsam voluptatem quia voluptas
-										span.text--desc
+									.teem__desc-and-social-contact
+										span.text__desc-bold Nemo enim ipsam voluptatem quia voluptas
+										span.text__desc
 											| sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-										.social--contact
-											a.social-btn.social-btn--twitter(href='')
-											a.social-btn.social-btn--facebook(href='')
-											a.social-btn.social-btn--google-plus(href='')
-								span.team--surname Martin Matrone
-								span.teem--specialization Lead Developer
-							.team--iteam-column
-								.team--iteam-column_wrap
+										.social__contact
+											a.social-btn.social-btn_twitter(href='')
+											a.social-btn.social-btn_facebook(href='')
+											a.social-btn.social-btn_google-plus(href='')
+								span.team__surname Martin Matrone
+								span.teem__specialization Lead Developer
+							.team__iteam-column
+								.team__iteam-column_wrap
 									img(src='img/photo-4.jpg', alt='photo')
-									.teem--desc-and-social-contact
-										span.text--desc-bold Nemo enim ipsam voluptatem quia voluptas
-										span.text--desc
+									.teem__desc-and-social-contact
+										span.text__desc-bold Nemo enim ipsam voluptatem quia voluptas
+										span.text__desc
 											| sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-										.social--contact
-											a.social-btn.social-btn--twitter(href='')
-											a.social-btn.social-btn--facebook(href='')
-											a.social-btn.social-btn--google-plus(href='')
-								span.team--surname Steve Flaulkin
-								span.teem--specialization Sr. UI Designer
+										.social__contact
+											a.social-btn.social-btn_twitter(href='')
+											a.social-btn.social-btn_facebook(href='')
+											a.social-btn.social-btn_google-plus(href='')
+								span.team__surname Steve Flaulkin
+								span.teem__specialization Sr. UI Designer
 					.slide-2
-						.team--list
-							.team--iteam-column
-								.team--iteam-column_wrap
+						.team__list
+							.team__iteam-column
+								.team__iteam-column_wrap
 									img(src='img/photo-1.jpg', alt='photo')
-									.teem--desc-and-social-contact
-										span.text--desc-bold Nemo enim ipsam voluptatem quia voluptas
-										span.text--desc
+									.teem__desc-and-social-contact
+										span.text__desc-bold Nemo enim ipsam voluptatem quia voluptas
+										span.text__desc
 											| sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-										.social--contact
-											a.social-btn.social-btn--twitter(href='')
-											a.social-btn.social-btn--facebook(href='')
-											a.social-btn.social-btn--google-plus(href='')
-								span.team--surname John Filmr Doe
-								span.teem--specialization Managing Director
-							.team--iteam-column
-								.team--iteam-column_wrap
+										.social__contact
+											a.social-btn.social-btn_twitter(href='')
+											a.social-btn.social-btn_facebook(href='')
+											a.social-btn.social-btn_google-plus(href='')
+								span.team__surname John Filmr Doe
+								span.teem__specialization Managing Director
+							.team__iteam-column
+								.team__iteam-column_wrap
 									img(src='img/photo-3.jpg', alt='photo')
-									.teem--desc-and-social-contact
-										span.text--desc-bold Nemo enim ipsam voluptatem quia voluptas
-										span.text--desc
+									.teem__desc-and-social-contact
+										span.text__desc-bold Nemo enim ipsam voluptatem quia voluptas
+										span.text__desc
 											| sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-										.social--contact
-											a.social-btn.social-btn--twitter(href='')
-											a.social-btn.social-btn--facebook(href='')
-											a.social-btn.social-btn--google-plus(href='')
-								span.team--surname Martin Matrone
-								span.teem--specialization Lead Developer
-							.team--iteam-column
-								.team--iteam-column_wrap
+										.social__contact
+											a.social-btn.social-btn_twitter(href='')
+											a.social-btn.social-btn_facebook(href='')
+											a.social-btn.social-btn_google-plus(href='')
+								span.team__surname Martin Matrone
+								span.teem__specialization Lead Developer
+							.team__iteam-column
+								.team__iteam-column_wrap
 									img(src='img/photo-2.jpg', alt='photo')
-									.teem--desc-and-social-contact
-										span.text--desc-bold Nemo enim ipsam voluptatem quia voluptas
-										span.text--desc
+									.teem__desc-and-social-contact
+										span.text__desc-bold Nemo enim ipsam voluptatem quia voluptas
+										span.text__desc
 											| sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-										.social--contact
-											a.social-btn.social-btn--twitter(href='')
-											a.social-btn.social-btn--facebook(href='')
-											a.social-btn.social-btn--google-plus(href='')
-								span.team--surname Chystine Hineu
-								span.teem--specialization Lead Designer
+										.social__contact
+											a.social-btn.social-btn_twitter(href='')
+											a.social-btn.social-btn_facebook(href='')
+											a.social-btn.social-btn_google-plus(href='')
+								span.team__surname Chystine Hineu
+								span.teem__specialization Lead Designer
 
-							.team--iteam-column
-								.team--iteam-column_wrap
+							.team__iteam-column
+								.team__iteam-column_wrap
 									img(src='img/photo-4.jpg', alt='photo')
-									.teem--desc-and-social-contact
-										span.text--desc-bold Nemo enim ipsam voluptatem quia voluptas
-										span.text--desc
+									.teem__desc-and-social-contact
+										span.text__desc-bold Nemo enim ipsam voluptatem quia voluptas
+										span.text__desc
 											| sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-										.social--contact
-											a.social-btn.social-btn--twitter(href='')
-											a.social-btn.social-btn--facebook(href='')
-											a.social-btn.social-btn--google-plus(href='')
-								span.team--surname Steve Flaulkin
-								span.teem--specialization Sr. UI Designer
+										.social__contact
+											a.social-btn.social-btn_twitter(href='')
+											a.social-btn.social-btn_facebook(href='')
+											a.social-btn.social-btn_google-plus(href='')
+								span.team__surname Steve Flaulkin
+								span.teem__specialization Sr. UI Designer
 					.slide-3
-						.team--list
-							.team--iteam-column
-								.team--iteam-column_wrap
+						.team__list
+							.team__iteam-column
+								.team__iteam-column_wrap
 									img(src='img/photo-1.jpg', alt='photo')
-									.teem--desc-and-social-contact
-										span.text--desc-bold Nemo enim ipsam voluptatem quia voluptas
-										span.text--desc
+									.teem__desc-and-social-contact
+										span.text__desc-bold Nemo enim ipsam voluptatem quia voluptas
+										span.text__desc
 											| sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-										.social--contact
-											a.social-btn.social-btn--twitter(href='')
-											a.social-btn.social-btn--facebook(href='')
-											a.social-btn.social-btn--google-plus(href='')
-								span.team--surname John Filmr Doe
-								span.teem--specialization Managing Director
-							.team--iteam-column
-								.team--iteam-column_wrap
+										.social__contact
+											a.social-btn.social-btn_twitter(href='')
+											a.social-btn.social-btn_facebook(href='')
+											a.social-btn.social-btn_google-plus(href='')
+								span.team__surname John Filmr Doe
+								span.teem__specialization Managing Director
+							.team__iteam-column
+								.team__iteam-column_wrap
 									img(src='img/photo-2.jpg', alt='photo')
-									.teem--desc-and-social-contact
-										span.text--desc-bold Nemo enim ipsam voluptatem quia voluptas
-										span.text--desc
+									.teem__desc-and-social-contact
+										span.text__desc-bold Nemo enim ipsam voluptatem quia voluptas
+										span.text__desc
 											| sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-										.social--contact
-											a.social-btn.social-btn--twitter(href='')
-											a.social-btn.social-btn--facebook(href='')
-											a.social-btn.social-btn--google-plus(href='')
-								span.team--surname Chystine Hineu
-								span.teem--specialization Lead Designer
-							.team--iteam-column
-								.team--iteam-column_wrap
+										.social__contact
+											a.social-btn.social-btn_twitter(href='')
+											a.social-btn.social-btn_facebook(href='')
+											a.social-btn.social-btn_google-plus(href='')
+								span.team__surname Chystine Hineu
+								span.teem__specialization Lead Designer
+							.team__iteam-column
+								.team__iteam-column_wrap
 									img(src='img/photo-4.jpg', alt='photo')
-									.teem--desc-and-social-contact
-										span.text--desc-bold Nemo enim ipsam voluptatem quia voluptas
-										span.text--desc
+									.teem__desc-and-social-contact
+										span.text__desc-bold Nemo enim ipsam voluptatem quia voluptas
+										span.text__desc
 											| sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-										.social--contact
-											a.social-btn.social-btn--twitter(href='')
-											a.social-btn.social-btn--facebook(href='')
-											a.social-btn.social-btn--google-plus(href='')
-								span.team--surname Steve Flaulkin
-								span.teem--specialization Sr. UI Designer
-							.team--iteam-column
-								.team--iteam-column_wrap
+										.social__contact
+											a.social-btn.social-btn_twitter(href='')
+											a.social-btn.social-btn_facebook(href='')
+											a.social-btn.social-btn_google-plus(href='')
+								span.team__surname Steve Flaulkin
+								span.teem__specialization Sr. UI Designer
+							.team__iteam-column
+								.team__iteam-column_wrap
 									img(src='img/photo-3.jpg', alt='photo')
-									.teem--desc-and-social-contact
-										span.text--desc-bold Nemo enim ipsam voluptatem quia voluptas
-										span.text--desc
+									.teem__desc-and-social-contact
+										span.text__desc-bold Nemo enim ipsam voluptatem quia voluptas
+										span.text__desc
 											| sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem.
-										.social--contact
-											a.social-btn.social-btn--twitter(href='')
-											a.social-btn.social-btn--facebook(href='')
-											a.social-btn.social-btn--google-plus(href='')
-								span.team--surname Martin Matrone
-								span.teem--specialization Lead Developer
-
-
-
-
+										.social__contact
+											a.social-btn.social-btn_twitter(href='')
+											a.social-btn.social-btn_facebook(href='')
+											a.social-btn.social-btn_google-plus(href='')
+								span.team__surname Martin Matrone
+								span.teem__specialization Lead Developer
 	// end team
 
 	section.some-fun-fact
 		.container
-			header.some-fun-fact--header
+			header.some-fun-fact__header
 				h3 Some fun fact
-			.some-fun-fact--column__wraper
-				.some-fun-fact--column.some-fun-fact--column__hours
-					span.some-fun-fact--number 3200
-					p.text--some-fun-fact Hourse of work
-				.some-fun-fact--column.some-fun-fact--column__clinets
-					span.some-fun-fact--number 120
-					p.text--some-fun-fact Satisfied Clinets
-				.some-fun-fact--column.some-fun-fact--column__project
-					span.some-fun-fact--number 360
-					p.text--some-fun-fact Project delivered
-				.some-fun-fact--column.some-fun-fact--column__awards
-					span.some-fun-fact--number 42
-					p.text--some-fun-fact Awards won
+			.some-fun-fact__column-wraper
+				.some-fun-fact__column.some-fun-fact__column_hours
+					span.some-fun-fact__number 3200
+					p.text__some-fun-fact Hourse of work
+				.some-fun-fact__column.some-fun-fact__column_clinets
+					span.some-fun-fact__number 120
+					p.text__some-fun-fact Satisfied Clinets
+				.some-fun-fact__column.some-fun-fact__column_project
+					span.some-fun-fact__number 360
+					p.text__some-fun-fact Project delivered
+				.some-fun-fact__column.some-fun-fact__column_awards
+					span.some-fun-fact__number 42
+					p.text__some-fun-fact Awards won
 	// end some-fun-fact
 
 	section#contact.discuss
 		.container
-			header.discuss--header
+			header.discuss__header
 				h3 Let's discuss
-			p.text--discuss__parag
+			p.text__discuss_parag
 				| Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-			.discuss--column__wraper
-				.discuss--column.discuss--column__contact
-					p.text--discuss--slogan Cras at ultrices erat, sed vulputate!
-					p.text--contacts
+			.discuss__column-wraper
+				.discuss__column.discuss__column_contact
+					p.text__discuss_slogan Cras at ultrices erat, sed vulputate!
+					p.text__contacts
 						| 2345 Setwant natrer, 1234, Washington. United States. (401) 1234 567 hello@brandi.com www.brandi.com
-				.discuss--column.discuss--column__message
-					form.discuss--message.clearfix(action='message.html', method='post')
-						h3.discuss--message__title Say hello!
+				.discuss__column.discuss__column_message
+					form.discuss__message.clearfix(action='message.html', method='post')
+						h3.discuss__message_title Say hello!
 						input(type='text', name='name', placeholder='Name' )
 						input(type='email', name='email', placeholder='Email' )
 						textarea(name='message', placeholder='Message' )
 						button(type='submit', name='button') Send message
 						//- required
-				.discuss--column.discuss--column__social-contact
-					.social--contact
-						a.social-btn--discuss.social-btn--behance(href='#', target='_blank')
-						a.social-btn--discuss.social-btn--twitter(href='#', target='_blank')
-						a.social-btn--discuss.social-btn--dribbble(href='#', target='_blank')
-						a.social-btn--discuss.social-btn--forrst(href='#', target='_blank')
-						a.social-btn--discuss.social-btn--google-plus(href='#', target='_blank')
-		.discuss--maps
-			.discuss--map
-			.discuss--map-js
+				.discuss__column.discuss__column_social-contact
+					.social__contact
+						a.social-btn__discuss.social-btn_behance(href='#', target='_blank')
+						a.social-btn__discuss.social-btn_twitter(href='#', target='_blank')
+						a.social-btn__discuss.social-btn_dribbble(href='#', target='_blank')
+						a.social-btn__discuss.social-btn_forrst(href='#', target='_blank')
+						a.social-btn__discuss.social-btn_google-plus(href='#', target='_blank')
+		.discuss__maps
+			.discuss__map
+			.discuss__map_js
 				#discuss--map-js(style='width: 100%; height: 215px;')
 
 	// end discuss

@@ -5,7 +5,7 @@
   font-size: 0px;
   .padding(97px 0 147px 0);
 }
-.some-fun-fact--header h3 {
+.some-fun-fact__header h3 {
   position: relative;
   font-size: 28px;
   color: #1ea78d;
@@ -26,7 +26,7 @@
 	  height: 14px;
   }
 }
-.some-fun-fact--column {
+.some-fun-fact__column {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -40,7 +40,7 @@
     width: 50%;
     .margin(0 0 200px 0);
   }
-  
+
   &:first-child {
     .margin();
   }
@@ -56,7 +56,7 @@
   }
 
 }
-.some-fun-fact--column.some-fun-fact--column {
+.some-fun-fact__column.some-fun-fact__column {
   @media (max-width: 380px) {
     width: 100%;
     .margin(0 0 200px 0);
@@ -67,11 +67,11 @@
     }
   }
 }
-.some-fun-fact--column__wraper, .some-fun-fact--column p {
+.some-fun-fact__column-wraper, .some-fun-fact__column p {
   .margin();
 }
 
-.some-fun-fact--column::before {
+.some-fun-fact__column::before {
   content: "";
   position: absolute;
   top: -173px;
@@ -88,51 +88,44 @@
     transform: translateX(-50%);
   }
 }
-.some-fun-fact--column__hours::after,
-.some-fun-fact--column__clinets::after,
-.some-fun-fact--column__project::after,
-.some-fun-fact--column__awards::after {
+.some-fun-fact__column_hours::after,
+.some-fun-fact__column_clinets::after,
+.some-fun-fact__column_project::after,
+.some-fun-fact__column_awards::after {
   content: "";
   position: absolute;
   top: -126px;
   left: 50%;
   transform: translateX(-50%);
 }
-.some-fun-fact--column__hours::after {
+.some-fun-fact__column_hours::after {
   background: url("@{path-sprite}") 0 0;
 	width: 38px;
 	height: 38px;
 }
-.some-fun-fact--column__clinets::after {
+.some-fun-fact__column_clinets::after {
   background: url("@{path-sprite}") 0 -92px;
 	width: 38px;
 	height: 38px;
 }
-.some-fun-fact--column__project::after {
+.some-fun-fact__column_project::after {
   background: url("@{path-sprite}") 0 -130px;
 	width: 32px;
 	height: 32px;
 }
-.some-fun-fact--column__awards::after {
+.some-fun-fact__column_awards::after {
   background: url("@{path-sprite}") 0 -38px;
 	width: 40px;
 	height: 38px;
 }
-
-
-
-
-
-
-
-.some-fun-fact--number {
+.some-fun-fact__number {
   font-size: 60px;
   line-height: 60px;
   @media (max-width: 768px) {
-    font-size: 2.5em; 
+    font-size: 2.5em;
   }
 }
-.text--some-fun-fact {
+.text__some-fun-fact {
   text-transform: uppercase;
   line-height: 36px;
 }

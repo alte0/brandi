@@ -7,11 +7,11 @@
   background-size: cover;
   .padding(0 0 50px 0);
 }
-.header--top {
+.header__top {
   background-color: @palette-bg-top-header;
   .padding(0 0 19px 0);
 }
-.logo--wrap {
+.logo__wrap {
   .padding (24px 0 0 0);
   .float();
   @media (max-width:650px) {
@@ -45,14 +45,14 @@
   line-height: 27px;
   vertical-align: top;
 }
-.header--nav {
+.header__nav {
   .float(right);
     @media (max-width:650px) {
       .float(none);
       width: 100%;
       }
 }
-.main-menu--lists {
+.main-menu__lists {
   .margin();
   .padding();
   list-style: none;
@@ -63,12 +63,12 @@
     .padding(0 60px);
   }
 }
-.main-menu--item {
+.main-menu__item {
   .float();
   .margin(0 0 0 33.7px);
   font-size: 13px;
   position: relative;
-  &__active::before, &:hover::before {
+  &_active::before, &:hover::before {
     content: "";
     position: absolute;
     top: 0;
@@ -97,43 +97,6 @@
     .padding(150px 0 0);
   }
 }
-// .header-slider input, .slide-1, .slide-2, .slide-3 {
-//   display: none;
-// }
-// .header-slider .slider--controls {
-//   position: absolute;
-//   top: 374px;
-//   right: 48px;
-//   @media (max-width: 780px) {
-//     top: 700px;
-//     right: 50%;
-//     transform: translateX(50%);
-//   }
-// }
-// .btn-1::before, .btn-2::before, .btn-3::before {
-//   content: "";
-//   cursor: pointer;
-//   display: block;
-//   border-radius: 50%;
-//   border: 1px solid rgba(255, 255, 255, 0.2);
-//   width: 6px;
-//   height: 6px;
-//   .margin(0 0 14px 0);
-//   @media (max-width: 780px) {
-//     display: inline-block;
-//     .margin(0 15px 0 0);
-//    }
-// }
-// #btn-1:checked ~ .slider--controls .btn-1::before,
-// #btn-2:checked ~ .slider--controls .btn-2::before,
-// #btn-3:checked ~ .slider--controls .btn-3::before {
-//   background-color: white;
-// }
-// #btn-1:checked ~ .slider--slides .slide-1,
-// #btn-2:checked ~ .slider--slides .slide-2,
-// #btn-3:checked ~ .slider--slides .slide-3 {
-//   display: block;
-// }
 .slick-list, .slick-slider.slick-slider {
 	position: static;
 }
@@ -163,35 +126,35 @@
 .header-slider .slick-active button {
 	background-color: white;
 }
-.slide--text, .social--btns {
+.slide__text, .social__btns {
   text-align: center;
 }
-.slide--text {
+.slide__text {
   color: white;
   .margin(0 0 0px 0);
 }
-.text--big-slide {
+.text__big-slide {
   font-size: 62px;
   line-height: 62px;
   color: white;
   .margin(0 0 10px 0);
 }
-.text--creative {
+.text__creative {
   font-size: 48px;
   line-height: 48px;
   color: white;
   .margin(0 0 22px 0);
 }
-.text--creative__green {
+.text__creative_green {
   color: #0fda93;
 }
-.text--small-slide {
+.text__small-slide {
   font-size: 18px;
   line-height: 18px;
   display: inline-block;
   position: relative;
   .margin(0 0 111px 0);
-  &&::before, &&::after{
+  &::before, &::after{
     position: absolute;
     top: 11px;
     content: "";
@@ -203,51 +166,51 @@
       display: none;
     }
   }
-  &&::before {
+  &::before {
     left: -61px;
   }
-  &&::after {
+  &::after {
     right: -61px;
   }
 }
-.social--btns {
+.social__btns {
   font-size: 0;
   line-height: 20px;
 }
-.social--btn {
+.social__btn {
   position: relative;
   opacity: 0.3;
   display: inline-block;
 }
-.social--btn:hover {
+.social__btn:hover {
   opacity: 1;
 }
-.social--btn__twitter,
-.social--btn__facebook,
-.social--btn__googleplus,
-.social--btn__dribbble {
+.social__btn_twitter,
+.social__btn_facebook,
+.social__btn_googleplus,
+.social__btn_dribbble {
   width: 20px;
   height: 20px;
 }
-.social--btn__twitter {
+.social__btn_twitter {
   margin-right: 16px;
   background: url("@{path-sprite}") 0 -531px;
 	width: 20px;
 	height: 16px;
 }
-.social--btn__facebook {
+.social__btn_facebook {
   margin-right: 18px;
   background: url("@{path-sprite}") 0 -264px;
 	width: 10px;
 	height: 18px;
 }
-.social--btn__googleplus {
+.social__btn_googleplus {
   margin-right: 12px;
   background: url("@{path-sprite}") 0 -370px;
 	width: 18px;
 	height: 18px;
 }
-.social--btn__dribbble {
+.social__btn_dribbble {
   background: url("@{path-sprite}") 0 -204px;
 	width: 20px;
 	height: 20px;
