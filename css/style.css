@@ -225,27 +225,37 @@ img {
   opacity: 1;
 }
 .animated {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 .animated.fadeIn {
-  -webkit-animation-name: fadeIn;
-          animation-name: fadeIn;
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
 }
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes fadeInDown {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
-@keyframes fadeIn {
+@keyframes fadeInDown {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 .page-header {

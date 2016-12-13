@@ -3023,23 +3023,32 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 			});
 			// viewportChecker and animate
 			var arrClass = [];
-			arrClass.push($('.header--top'));
+			// arrClass.push($('.header__top'));
 			arrClass.push($('.header-slider'));
-			arrClass.push($('.feature'));
-			arrClass.push($('.works'));
-			arrClass.push($('.team'));
-			arrClass.push($('.some-fun-fact'));
-			arrClass.push($('.discuss'));
-			arrClass.push($('.page-footer'));
+			arrClass.push($('.feature__header'));
+			arrClass.push($('.feature-slider'));
+			arrClass.push($('.works__header'));
+			arrClass.push($('.text__semibold'));
+			arrClass.push($('.works__filter'));
+			arrClass.push($('.works__sorted'));
+			arrClass.push($('.team__header'));
+			arrClass.push($('.team-slider'));
+			arrClass.push($('.some-fun-fact__header'));
+			arrClass.push($('.some-fun-fact__column-wraper'));
+			arrClass.push($('.discuss__header'));
+			arrClass.push($('.text__discuss_parag'));
+			arrClass.push($('.discuss__column-wraper'));
+			arrClass.push($('.discuss__maps'));
+			arrClass.push($('.footer__column'));
 
-			// $.each(arrClass, function(index, element) {
-			// 	element.addClass('hidden').viewportChecker({
-			// 		classToAdd: 'visible animated fadeIn',
-			// 		// classToAddForFullView: 'visible',
-			// 		// classToRemove: 'hidden'
-			// 		offset: 100
-			// 	});
-			// });
+			$.each(arrClass, function(index, element) {
+				element.addClass('hidden').viewportChecker({
+					classToAdd: 'visible animated fadeIn',
+					// classToAddForFullView: 'visible',
+					classToRemove: 'hidden visible animated fadeIn'
+					// offset: 100
+				});
+			});
 
 	});
 })(jQuery);
