@@ -81,7 +81,7 @@
 			});
 
 			//slick
-			$('.header-slider .slider__slides').slick({
+			$('.header-slider').slick({
 				dots: true,
 			  infinite: true,
 			  speed: 1000,
@@ -92,7 +92,7 @@
 			  autoplaySpeed: 2500,
 				arrows: false
       });
-			$('.feature-slider .slider__slides').slick({
+			$('.feature-slider').slick({
 				dots: true,
 			  infinite: true,
 			  speed: 1000,
@@ -103,7 +103,8 @@
 			  autoplaySpeed: 3000,
 				arrows: false
 			});
-			$('.team-slider .slider__slides').slick({
+			$('.feature-slider').slick('slickPause');
+			$('.team-slider').slick({
 				dots: true,
 			  infinite: true,
 			  speed: 1000,
