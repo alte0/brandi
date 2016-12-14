@@ -2988,7 +2988,7 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 			});
 
 			//slick
-			$('.header-slider .slider__slides').slick({
+			$('.header-slider').slick({
 				dots: true,
 			  infinite: true,
 			  speed: 1000,
@@ -2999,7 +2999,7 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 			  autoplaySpeed: 2500,
 				arrows: false
       });
-			$('.feature-slider .slider__slides').slick({
+			$('.feature-slider').slick({
 				dots: true,
 			  infinite: true,
 			  speed: 1000,
@@ -3010,7 +3010,8 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 			  autoplaySpeed: 3000,
 				arrows: false
 			});
-			$('.team-slider .slider__slides').slick({
+			$('.feature-slider').slick('slickPause');
+			$('.team-slider').slick({
 				dots: true,
 			  infinite: true,
 			  speed: 1000,
