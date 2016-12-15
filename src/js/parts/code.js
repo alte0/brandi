@@ -103,7 +103,6 @@
 			  autoplaySpeed: 3000,
 				arrows: false
 			});
-			$('.feature-slider').slick('slickPause');
 			$('.team-slider').slick({
 				dots: true,
 			  infinite: true,
