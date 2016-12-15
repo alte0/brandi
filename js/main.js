@@ -3010,7 +3010,6 @@ void 0!==c?null===c?void r.removeAttr(a,b):e&&"set"in e&&void 0!==(d=e.set(a,c,b
 			  autoplaySpeed: 3000,
 				arrows: false
 			});
-			$('.feature-slider').slick('slickPause');
 			$('.team-slider').slick({
 				dots: true,
 			  infinite: true,

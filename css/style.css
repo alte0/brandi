@@ -199,6 +199,9 @@ img {
 .team-slider .slick-active button {
   background-color: #062033;
 }
+.slick-dots {
+  list-style: none;
+}
 @-webkit-keyframes hoverUpDown {
   0% {
     -webkit-transform: translateY(-100%);
@@ -354,7 +357,7 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.2);
   margin: 0 0 14px 0;
 }
-.header-slider .slick-dots button .header-slider .slick-active button {
+.header-slider .slick-active button {
   background-color: white;
 }
 .slide__text,
