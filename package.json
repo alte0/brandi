@@ -29,6 +29,9 @@
     "grunt-rigger": "^0.6.0",
     "grunt-svgmin": "^3.3.0",
     "grunt-svgstore": "^1.0.0",
-    "load-grunt-tasks": "^3.5.2"
+    "jquery": "^3.2.1",
+    "jquery-plugin-viewport-checker": "^1.8.3",
+    "load-grunt-tasks": "^3.5.2",
+    "slick-carousel": "^1.6.0"
   }
 }

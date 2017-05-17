@@ -7,11 +7,11 @@ html(lang="EN")
 		link(rel='stylesheet', href='css/style.min.css')
 		//- link(rel='stylesheet', href='css/style.css')
 		script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU', type='text/javascript')
-		script(src='js/main.js')
 	body
 		include header.pug
 		block content
 		include footer.pug
+		script(src='js/main.js')
 		script(type='text/javascript').
 			ymaps.ready(init);
 			var myMap;
